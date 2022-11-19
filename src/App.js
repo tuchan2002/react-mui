@@ -3,7 +3,16 @@ import Stack from "@mui/material/Stack";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { AppBar, Box, Toolbar, Typography, Grid, styled } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Grid,
+  styled,
+  IconButton,
+  Tooltip,
+} from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -41,11 +50,16 @@ function App() {
         </Toolbar>
       </AppBar>
 
-      <Box mt={3} sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
+      <Box
+        mt={3}
+        px={5}
+        sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+      >
         <Typography variant="h1" align="center">
           MUI App
         </Typography>
-        <Typography variant="subtitle1" align="justify" p={5}>
+
+        <Typography variant="subtitle1" align="justify">
           This works great when the changes can be isolated to a new DOM
           element. For instance, you can change the margin this way. However,
           sometimes you have to target the underlying DOM element. As an
@@ -54,6 +68,12 @@ function App() {
           workaround the problem, you can use the sx prop directly on the child
           if it is a MUI component.
         </Typography>
+
+        <Tooltip title="Delete">
+          <IconButton>
+            <DeleteIcon />
+          </IconButton>
+        </Tooltip>
       </Box>
 
       <Grid container p={5} spacing={5}>

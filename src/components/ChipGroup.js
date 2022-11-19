@@ -34,7 +34,7 @@ const ChipGroup = () => {
       ))}
       <Snackbar
         open={openSnackbar}
-        autoHideDuration={200000}
+        autoHideDuration={2000}
         onClose={handleClose}
       >
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
