@@ -9,11 +9,13 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import HomeIcon from "@mui/icons-material/Home";
 import Radio from "@mui/material/Radio";
+import Rating from "@mui/material/Rating";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import ChipGroup from "./components/ChipGroup";
+import { useState } from "react";
 
 const MyButton = styled(Button)({
   backgroundColor: "#229999",
@@ -25,6 +27,7 @@ const MyButton = styled(Button)({
   },
 });
 function App() {
+  const [rating, setRating] = useState(3);
   return (
     <div>
       <AppBar position="static">
@@ -127,6 +130,12 @@ function App() {
           </FormControl>
 
           <ChipGroup />
+
+          <Rating
+            name="simple-controlled"
+            value={rating}
+            onChange={(e) => setRating(-(-e.target.value))}
+          />
         </Grid>
       </Grid>
 
