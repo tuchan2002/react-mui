@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { AppBar, Box, Toolbar, Typography, Grid } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography, Grid, styled } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -15,6 +15,16 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 
 function App() {
+  const MyButton = styled(Button)({
+    backgroundColor: "#009900",
+    paddingLeft: 20,
+    paddingRight: 20,
+    color: "#ffffff",
+    "&:hover": {
+      backgroundColor: "#339966",
+    },
+  });
+
   return (
     <div>
       <AppBar position="static">
@@ -118,7 +128,12 @@ function App() {
         </Grid>
       </Grid>
 
-      <Stack direction="row" spacing={5} justifyContent="center">
+      <Stack
+        direction="row"
+        spacing={5}
+        justifyContent="center"
+        alignItems="center"
+      >
         <Button variant="text">Click</Button>
         <Button variant="contained">Login</Button>
         <Button variant="outlined">Register</Button>
@@ -129,6 +144,7 @@ function App() {
         <Button variant="outlined" startIcon={<SendIcon />}>
           Send
         </Button>
+        <MyButton>MyButton</MyButton>
       </Stack>
     </div>
   );
