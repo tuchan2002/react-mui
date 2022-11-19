@@ -13,18 +13,18 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import ChipGroup from "./components/ChipGroup";
 
+const MyButton = styled(Button)({
+  backgroundColor: "#229999",
+  paddingLeft: 20,
+  paddingRight: 20,
+  color: "#ffffff",
+  "&:hover": {
+    backgroundColor: "#339966",
+  },
+});
 function App() {
-  const MyButton = styled(Button)({
-    backgroundColor: "#009900",
-    paddingLeft: 20,
-    paddingRight: 20,
-    color: "#ffffff",
-    "&:hover": {
-      backgroundColor: "#339966",
-    },
-  });
-
   return (
     <div>
       <AppBar position="static">
@@ -125,6 +125,8 @@ function App() {
               />
             </RadioGroup>
           </FormControl>
+
+          <ChipGroup />
         </Grid>
       </Grid>
 
