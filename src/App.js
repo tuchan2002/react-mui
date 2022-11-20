@@ -25,6 +25,7 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import ChipGroup from "./components/ChipGroup";
 import { useState } from "react";
+import XDataGrid from "./components/XDataGrid";
 
 const MyButton = styled(Button)({
   backgroundColor: "#229999",
@@ -177,6 +178,8 @@ function App() {
         </Button>
         <MyButton>MyButton</MyButton>
       </Stack>
+
+      <XDataGrid />
     </div>
   );
 }
