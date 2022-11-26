@@ -9,6 +9,7 @@ import "@fontsource/roboto/700.css";
 import { ThemeProvider } from "@mui/system";
 import { customTheme } from "./customTheme";
 import CssBaseline from "@mui/material/CssBaseline";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
